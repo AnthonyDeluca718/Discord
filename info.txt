@@ -1,0 +1,3 @@
+Download Script: python -m pip install -U discord.py
+
+Put credenials in credenials.py
