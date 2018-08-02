@@ -19,7 +19,7 @@ async def get_servers():
 
 async def print_stuff():
     servers = await get_servers()
-    drb = [server for server in servers if server.id == '260623337292693504'][0]
+    drb = [server for server in servers if server.id == '218820487105478657'][0]
     channels = drb.channels
     for idx, channel in enumerate(channels):
         print(channel.name)
@@ -28,3 +28,6 @@ async def print_stuff():
 
 client.loop.create_task(print_stuff())
 client.run(email, password)
+
+# 218820487105478657 drb
+# 260623337292693504 dinofarm

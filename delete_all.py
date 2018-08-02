@@ -5,9 +5,9 @@ import datetime
 
 client = discord.Client()
 
-# channels_to_delete = [7, 8, 11, 12, 17, 20, 21, 26, 27, 29, 30, 32, 33] default drb channels
+channels_to_delete = [7, 8, 11, 12, 20, 21, 26, 27, 29, 30, 32, 33] # default drb channels
 # channels_to_delete = [0, 2, 3, 4, 5, 6, 7] default dinfoarm channels
-channels_to_delete = [13]
+# channels_to_delete = [13]
 
 mydate = datetime.datetime(2018, 5, 1)
 
@@ -25,7 +25,7 @@ async def get_servers():
 
 async def get_channels():
   servers = await get_servers()
-  server = [server for server in servers if server.id == '260623337292693504'][0]
+  server = [server for server in servers if server.id == '218820487105478657'][0]
   channels = server.channels
   return channels
 
