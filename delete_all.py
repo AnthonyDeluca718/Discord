@@ -5,11 +5,11 @@ import datetime
 
 client = discord.Client()
 
-channels_to_delete = [7, 8, 11, 12, 20, 21, 26, 27, 29, 30, 32, 33] # default drb channels
-# channels_to_delete = [0, 2, 3, 4, 5, 6, 7] default dinfoarm channels
-# channels_to_delete = [13]
+# channels_to_delete = [1, 2, 3, 4, 6, 7, 10, 11, 13, 14, 15, 16, 21, 22, 24, 25, 26, 27, 29, 31, 34, 36, 39, 42, 43] # default drb channels
+# channels_to_delete = [0, 2, 3, 4, 5, 6, 7, 11] # default dinfoarm channels
+start_idx = 1
 
-mydate = datetime.datetime(2018, 5, 1)
+mydate = datetime.datetime(2019, 6, 6)
 
 async def delete_messages(channel):
   print(channel.name)
@@ -34,7 +34,7 @@ async def delete_all_messages():
 
   for idx, channel in enumerate(channels):
     print(idx)
-    if (idx in channels_to_delete):
+    if (idx in channels_to_delete and idx >= start_idx):
       await delete_messages(channel)
 
 client.loop.create_task(delete_all_messages())
